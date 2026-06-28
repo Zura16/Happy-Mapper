@@ -1,0 +1,176 @@
+===============================================================================
+STARBOUND - QUICK START GUIDE
+===============================================================================
+
+📋 SETUP (ONE TIME)
+===============================================================================
+
+1. Activate Virtual Environment
+   Windows PowerShell:
+   > .\venv\Scripts\Activate.ps1
+
+   Windows CMD:
+   > .\venv\Scripts\activate.bat
+
+2. Install Dependencies
+   > cd ai\gemini_parser
+   > pip install -r requirements.txt
+
+3. Configure API Keys
+   Edit file: ai\gemini_parser\.env
+
+   Required:
+   GEMINI_API_KEY=your_api_key_here
+   FIREBASE_SERVICE_ACCOUNT=..\..\paddle_ocr\happy_hour_service_account.json
+
+4. Add Firebase Credentials
+   Place your service account JSON file at:
+   paddle_ocr\happy_hour_service_account.json
+
+
+===============================================================================
+🚀 RUNNING THE CODE
+===============================================================================
+
+METHOD 1: Parse Menu & Upload to Firebase (CLI)
+-------------------------------------------------------------------------------
+> cd ai\gemini_parser
+> python upload_to_firebase.py path\to\menu_image.jpg
+
+Example:
+> python upload_to_firebase.py ..\..\paddle_ocr\happy_hour.png
+
+With custom collection:
+> python upload_to_firebase.py image.jpg --collection my_collection
+
+
+METHOD 2: Run FastAPI Server
+-------------------------------------------------------------------------------
+> cd ai\gemini_parser
+> uvicorn main:app --reload
+
+Then open: http://localhost:8000/docs
+
+API Endpoint:
+POST /parse-menu
+- Upload image file
+- Returns structured JSON with deals
+
+
+METHOD 3: Use in Python Code
+-------------------------------------------------------------------------------
+from gemini import parse_menu_image
+from firebase_uploader import FirebaseUploader
+
+# Parse menu
+menu_data = parse_menu_image("image.jpg")
+
+# Upload to Firebase
+uploader = FirebaseUploader(use_ocr=False)
+doc_id = uploader.upload_deals(menu_data)
+
+# With venue information
+venue_info = {
+    "venue_id": 1234,
+    "venue_name": "Restaurant Name",
+    "latitude": 33.785421,
+    "longitude": -118.149881,
+    "address": {
+        "street": "123 Main St",
+        "city": "City",
+        "state": "CA",
+        "zip": "12345"
+    }
+}
+doc_id = uploader.upload_deals(menu_data, venue_info=venue_info)
+
+
+===============================================================================
+📊 OUTPUT FORMAT
+===============================================================================
+
+The parser extracts deals in this format:
+
+{
+  "venue_id": null,
+  "venue_name": null,
+  "latitude": null,
+  "longitude": null,
+  "address": {},
+  "deals": [
+    {
+      "name": "Deal Name",
+      "price": "$10",
+      "description": "Deal description",
+      "start_time": "4:00 PM",
+      "end_time": "7:00 PM",
+      "days": ["Monday", "Tuesday", "Wednesday"],
+      "special_conditions": ["Condition 1", "Condition 2"]
+    }
+  ]
+}
+
+
+===============================================================================
+🔧 TROUBLESHOOTING
+===============================================================================
+
+Error: "Module not found"
+> Make sure virtual environment is activated
+> Run: pip install -r requirements.txt
+
+Error: "Firebase credentials not found"
+> Check that .env has correct path to service account JSON
+> Verify the JSON file exists at paddle_ocr\happy_hour_service_account.json
+
+Error: "API key not found"
+> Make sure .env file exists in ai\gemini_parser\
+> Check that GEMINI_API_KEY is set correctly
+
+Slow parsing:
+> Normal - Gemini AI takes 5-15 seconds per image
+> Check your internet connection
+
+
+===============================================================================
+📁 PROJECT STRUCTURE
+===============================================================================
+
+starbound/
+├── README.md                   # Full documentation
+├── QUICKSTART.txt             # This file
+├── venv/                      # Virtual environment
+├── ai/
+│   └── gemini_parser/         # Main application
+│       ├── .env               # API keys (DO NOT COMMIT)
+│       ├── gemini.py          # AI parser
+│       ├── main.py            # FastAPI server
+│       ├── upload_to_firebase.py  # Upload script
+│       └── requirements.txt
+└── paddle_ocr/
+    ├── firebase_uploader.py   # Firebase handler
+    └── happy_hour_service_account.json  # Firebase creds (DO NOT COMMIT)
+
+
+===============================================================================
+🎯 COMMON TASKS
+===============================================================================
+
+Test with sample image:
+> cd ai\gemini_parser
+> python upload_to_firebase.py ..\..\paddle_ocr\happy_hour.png
+
+Start API server:
+> cd ai\gemini_parser
+> uvicorn main:app --reload
+
+View API docs:
+> Open browser to http://localhost:8000/docs
+
+Check Firebase uploads:
+> Go to Firebase Console > Firestore > final_schema collection
+
+
+===============================================================================
+Need help? Check README.md for detailed documentation
+===============================================================================

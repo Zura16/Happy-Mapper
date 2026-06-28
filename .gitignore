@@ -1,0 +1,34 @@
+# Environment Variables
+.env/
+
+# VS Code
+.vscode/
+
+# Claude AI extension
+.claude/
+
+# Windows special files
+nul
+
+# Node dependencies
+my-app/node_modules/
+
+# NPM lock file
+package-lock.json
+
+# Expo
+.expo/
+
+# Documentation (optional, remove if you want to track it)
+VENUE_FORM_GUIDE.md
+
+node_modules/
+
+# Service account credentials (sensitive)
+paddle_ocr/happy_hour_service_account.json
+**/service_account.json
+**/*_service_account.json
+
+# Google Stuff DO NOT SHOW 
+./my-app/GoogleService-Info.plist
+./my-app/google-services.json
