@@ -52,8 +52,8 @@ By leveraging local AI through NexaSDK, Happy Mapper turns what would normally b
 
 1. Clone the Repository
 ```bash
-git clone https://github.com/WinstonTa/Starbound-Atlas-2025.git
-cd Starbound-Atlas-2025
+git clone https://github.com/Zura16/Happy-Mapper.git
+cd Happy-Mapper
 ```
 
 2. Install Dependencies
