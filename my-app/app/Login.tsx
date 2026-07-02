@@ -122,6 +122,12 @@ export default function LoginScreen() {
   };
 
   const handleLogin = async () => {
+    // Validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    // Validate email format before attempting Firebase auth
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
     // Trim inputs
     const trimmedEmail = email.trim();
 
