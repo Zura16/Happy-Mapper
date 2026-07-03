@@ -1,3 +1,4 @@
+// TODO: Add ErrorBoundary wrapper for production crash reporting
 import { Tabs, usePathname } from 'expo-router';
 import { Platform } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
