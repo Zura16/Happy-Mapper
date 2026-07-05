@@ -291,6 +291,11 @@ export default function MapScreen() {
     return { latitude: lat, longitude: lng };
   }
 
+  /**
+   * Calculate distance between two coordinates using the Haversine formula.
+   * Returns distance in miles.
+   * @see https://en.wikipedia.org/wiki/Haversine_formula
+   */
   function haversineDistance(a: { latitude: number; longitude: number }, b: { latitude: number; longitude: number }) {
     const toRad = (x: number) => (x * Math.PI) / 180;
     const R = 6371;
