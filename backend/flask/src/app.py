@@ -14,6 +14,12 @@ CORS(app)  # Enable CORS for frontend requests
 app.config["UPLOAD_FOLDER"] = "/tmp"  # has to be "/tmp"
 app.config["MAX_CONTENT_LENGTH"] = 16 * 1024 * 1024  # 16MB max file size
 
+# Request logging middleware
+@app.before_request
+def log_request_info():
+    """Log incoming request details for debugging"""
+    app.logger.info(f"Request: {request.method} {request.path}")
+
 # Register routes from endpoints/routes.py
 app.register_blueprint(api_bp)
 
