@@ -76,8 +76,8 @@ def upload_deal():
         }
     """
     print("[DEBUG] Received upload request")
-    print("[DEBUG] request.files: {request.files}")
-    print("[DEBUG] request.form: {request.form}")
+    print(f"[DEBUG] request.files: {request.files}")
+    print(f"[DEBUG] request.form: {request.form}")
 
     if not uploader:
         return jsonify(
@@ -98,7 +98,7 @@ def upload_deal():
         return jsonify({"success": False, "error": "No selected file"}), 400
 
     if not allowed_file(file.filename):
-        print("[ERROR] Invalid file type: {file.filename}")
+        print(f"[ERROR] Invalid file type: {file.filename}")
         return jsonify(
             {
                 "success": False,
