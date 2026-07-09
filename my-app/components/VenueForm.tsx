@@ -1,3 +1,4 @@
+// VenueForm - Reusable form component for venue data entry
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Alert } from 'react-native';
 

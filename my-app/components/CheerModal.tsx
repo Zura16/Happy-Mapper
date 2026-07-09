@@ -1,3 +1,4 @@
+// CheerModal - Celebration animation modal shown after successful actions
 import React from 'react';
 import { Modal, View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 
