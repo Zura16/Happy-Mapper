@@ -1,5 +1,5 @@
 ===============================================================================
-STARBOUND - QUICK START GUIDE
+HAPPY MAPPER - QUICK START GUIDE
 ===============================================================================
 
 📋 SETUP (ONE TIME)
@@ -136,7 +136,7 @@ Slow parsing:
 📁 PROJECT STRUCTURE
 ===============================================================================
 
-starbound/
+happy-mapper/
 ├── README.md                   # Full documentation
 ├── QUICKSTART.txt             # This file
 ├── venv/                      # Virtual environment
