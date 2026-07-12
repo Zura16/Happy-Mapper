@@ -1,0 +1,232 @@
+[
+  {
+    "venue_id": 1,
+    "venue_name": "Echo Hall",
+    "latitude": 33.785421,
+    "longitude": -118.149881,
+    "address": {
+      "street": "4001 E Anaheim St",
+      "city": "Long Beach",
+      "state": "CA",
+      "zip": "90804"
+    },
+    "deals": [
+      {
+        "name": "Half-Price Appetizers",
+        "price": "$5",
+        "description": "Select small plates",
+        "start_time": "4:00 PM",
+        "end_time": "7:00 PM",
+        "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "special_conditions": ["Bar area only"]
+      }
+    ]
+  },
+  {
+    "venue_id": 2,
+    "venue_name": "Silverline Arena",
+    "latitude": 33.78242022065725,
+    "longitude": -118.14740198375252,
+    "address": {
+      "street": "3832 E Anaheim St",
+      "city": "Long Beach",
+      "state": "CA",
+      "zip": "90804"
+    },
+    "deals": [
+      {
+        "name": "$3 Draft Beers",
+        "price": "$3",
+        "description": null,
+        "start_time": "5:00 PM",
+        "end_time": "8:00 PM",
+        "days": ["Friday", "Saturday"],
+        "special_conditions": null
+      }
+    ]
+  },
+  {
+    "venue_id": 3,
+    "venue_name": "Crescent Pavilion",
+    "latitude": 33.782730891140346,
+    "longitude": -118.14400133177249,
+    "address": {
+      "street": "4133 E Anaheim St",
+      "city": "Long Beach",
+      "state": "CA",
+      "zip": "90804"
+    },
+    "deals": [
+      {
+        "name": "2-for-1 Cocktails",
+        "price": "$8",
+        "description": "House specialties",
+        "start_time": "3:00 PM",
+        "end_time": "6:00 PM",
+        "days": ["Thursday", "Friday"],
+        "special_conditions": ["Dine-in only"]
+      }
+    ]
+  },
+  {
+    "venue_id": 4,
+    "venue_name": "Ironwood Center",
+    "latitude": 33.77509173286248,
+    "longitude": -118.13763735855706,
+    "address": {
+      "street": "4740 E 7th St #130",
+      "city": "Long Beach",
+      "state": "CA",
+      "zip": "90804"
+    },
+    "deals": [
+      {
+        "name": "Happy Hour Pizza",
+        "price": "$9",
+        "description": "Margherita or Pepperoni",
+        "start_time": "4:00 PM",
+        "end_time": "6:00 PM",
+        "days": ["Monday", "Tuesday", "Wednesday"],
+        "special_conditions": null
+      }
+    ]
+  },
+  {
+    "venue_id": 5,
+    "venue_name": "Arbor Hall",
+    "latitude": 33.767933005170875,
+    "longitude": -118.1444136285547,
+    "address": {
+      "street": "4114 E 3rd St",
+      "city": "Long Beach",
+      "state": "CA",
+      "zip": "90814"
+    },
+    "deals": [
+      {
+        "name": "Half-Off Wine Bottles",
+        "price": "50% off",
+        "description": null,
+        "start_time": "5:00 PM",
+        "end_time": "9:00 PM",
+        "days": ["Wednesday"],
+        "special_conditions": ["Dine-in only"]
+      }
+    ]
+  },
+  {
+    "venue_id": 6,
+    "venue_name": "Summit Loft",
+    "latitude": 33.764594003026424,
+    "longitude": -118.15150829228936,
+    "address": {
+      "street": "3441 E Broadway",
+      "city": "Long Beach",
+      "state": "CA",
+      "zip": "90803"
+    },
+    "deals": [
+      {
+        "name": "Margarita Monday",
+        "price": "$6",
+        "description": "Classic or spicy",
+        "start_time": "3:00 PM",
+        "end_time": "7:00 PM",
+        "days": ["Monday"],
+        "special_conditions": null
+      }
+    ]
+  },
+  {
+    "venue_id": 7,
+    "venue_name": "The Observatory",
+    "latitude": 33.77361311149658,
+    "longitude": -118.15210015930052,
+    "address": {
+      "street": "550 Redondo Ave",
+      "city": "Long Beach",
+      "state": "CA",
+      "zip": "90814"
+    },
+    "deals": [
+      {
+        "name": "Taco Tuesday",
+        "price": "$2",
+        "description": "Carne asada or chicken",
+        "start_time": "4:00 PM",
+        "end_time": "8:00 PM",
+        "days": ["Tuesday"],
+        "special_conditions": null
+      }
+    ]
+  },
+  {
+    "venue_id": 8,
+    "venue_name": "Harbor Hall",
+    "latitude": 33.77615276914915,
+    "longitude": -118.1239700323148,
+    "address": {
+      "street": "5570 Pacific Coast Hwy",
+      "city": "Long Beach",
+      "state": "CA",
+      "zip": "90804"
+    },
+    "deals": [
+      {
+        "name": "Draft Night",
+        "price": "$4",
+        "description": "All local brews",
+        "start_time": "5:00 PM",
+        "end_time": "10:00 PM",
+        "days": ["Thursday"],
+        "special_conditions": null
+      }
+    ]
+  },
+  {
+    "venue_id": 9,
+    "venue_name": "Ridgepoint Commons",
+    "latitude": 33.79585037617521,
+    "longitude": -118.10751141882125,
+    "address": {
+      "street": "6407 Stearns St",
+      "city": "Long Beach",
+      "state": "CA",
+      "zip": "90815"
+    },
+    "deals": [
+      {
+        "name": "Burger & Beer Combo",
+        "price": "$10",
+        "description": null,
+        "start_time": "4:30 PM",
+        "end_time": "7:30 PM",
+        "days": ["Friday"],
+        "special_conditions": ["Bar area only"]
+      }
+    ]
+  },
+  {
+    "venue_id": 10,
+    "venue_name": "Aurora Gallery",
+    "latitude": 33.78095037827294,
+    "longitude": -118.10248776117652,
+    "address": {
+      "street": "1180 N Studebaker Rd",
+      "city": "Long Beach",
+      "state": "CA",
+      "zip": "90815"
+    },
+    "deals": [
+      {
+        "name": "Wine & Cheese Pairing",
+        "price": "$15",
+        "description": "Glass of wine with artisan board",
+        "start_time": "6:00 PM",
+        "end_time": "9:00 PM",
+        "days": ["Saturday"],
+        "special_conditions": ["Reservations recommended"]
+      }
+    ]
+  }
+]
