@@ -61,6 +61,8 @@ function toVenue(doc: FirebaseFirestoreTypes.DocumentSnapshot): FrontendVenueWit
 }
 
 // ---- one-shot fetch ----
+// Fetches all venues from Firestore in a single read.
+// Use watchAllVenuesWithDeals() for real-time updates instead.
 export async function getAllVenuesWithDeals(): Promise<FrontendVenueWithDeals[]> {
   const colRef = collection(db, 'final_schema');
   const snap = await getDocs(colRef);
