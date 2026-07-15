@@ -1,0 +1,21 @@
+# Flask API
+flask>=3.0
+flask-cors>=4.0.0
+werkzeug>=3.0.0
+
+# Firebase
+firebase-admin>=6.0.0
+
+# AI/Vision
+google-generativeai>=0.3.0
+nexaai
+
+# Image processing
+Pillow>=10.0.0
+
+# Utilities
+python-dotenv>=1.0.0
+
+# Additional dependencies
+requests>=2.25.0
+
