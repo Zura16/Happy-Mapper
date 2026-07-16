@@ -1,3 +1,7 @@
+/**
+ * Health check utility for monitoring backend API availability.
+ * Called on app startup to verify the Flask backend is reachable.
+ */
 // src/health.ts
 import { getApp } from '@react-native-firebase/app';
 import { getFirestore, collection, getDocs, limit, query } from '@react-native-firebase/firestore';
