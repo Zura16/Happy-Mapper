@@ -591,6 +591,7 @@ export default function MapScreen() {
       >
         <TextInput
           placeholder="Search city, venue, or address (e.g. Long Beach)"
+          accessibilityLabel="Search for venues by city, name, or address"
           value={query}
           onChangeText={(text) => {
             setQuery(text);
