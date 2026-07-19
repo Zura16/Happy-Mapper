@@ -1,0 +1,42 @@
+# Firebase
+firebase-debug.log
+firestore-debug.log
+*.log
+
+# Node modules (functions will install their own)
+functions/node_modules/
+
+# Environment variables
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test files (don't commit test scripts)
+test*.js
+
+# Documentation files (for reference only, not committed)
+*.md
+docs/**/*.md
+
+# Populate script (utility, not needed in repo)
+populateDatabase.js
+
+# Service account keys (sensitive)
+service-account-key.json
+**/service-account-key.json
+
+
+
+
+
+
+

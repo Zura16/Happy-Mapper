@@ -1,0 +1,77 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Deals collection - anyone can read active, verified deals
+    match /deals/{dealId} {
+      // Anyone can read active, verified deals
+      allow read: if resource.data.active == true 
+        && resource.data.verified == true;
+      
+      // Users can read their own deals even if not verified
+      allow read: if request.auth != null 
+        && resource.data.userId == request.auth.uid;
+      
+      // Only authenticated users can create deals
+      allow create: if request.auth != null
+        && request.resource.data.userId == request.auth.uid;
+      
+      // Users can update their own deals
+      allow update: if request.auth != null 
+        && resource.data.userId == request.auth.uid;
+      
+      // No deletes (soft delete with active flag)
+      allow delete: if false;
+    }
+    
+    // Venues collection - public read, authenticated write
+    match /venues/{venueId} {
+      // Anyone can read venues (public data)
+      allow read: if true;
+      
+      // Only authenticated users can create venues
+      allow create: if request.auth != null;
+      
+      // Only business owners can update their venues
+      allow update: if request.auth != null 
+        && resource.data.claimedBy == request.auth.uid;
+      
+      // No deletes
+      allow delete: if false;
+    }
+    
+    // Users collection - public read, own write
+    match /users/{userId} {
+      // Anyone can read user profiles
+      allow read: if true;
+      
+      // Users can only create their own profile
+      allow create: if request.auth != null 
+        && request.resource.id == request.auth.uid;
+      
+      // Users can only update their own profile
+      allow update: if request.auth != null 
+        && request.resource.id == request.auth.uid;
+      
+      // No deletes
+      allow delete: if false;
+    }
+    
+    // Businesses collection - optional for MVP
+    match /businesses/{businessId} {
+      // Anyone can read businesses
+      allow read: if true;
+      
+      // Only authenticated users can create businesses
+      allow create: if request.auth != null;
+      
+      // Only business owners can update
+      allow update: if request.auth != null 
+        && resource.data.ownerId == request.auth.uid;
+      
+      // No deletes
+      allow delete: if false;
+    }
+  }
+}
+
