@@ -1,3 +1,8 @@
+/**
+ * Deal text parser for OCR-extracted menu content.
+ * Processes raw text from Gemini Vision API responses and
+ * extracts structured deal information (name, price, times, days).
+ */
 // api.ts
 import Constants from "expo-constants";
 
