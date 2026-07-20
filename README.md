@@ -50,30 +50,45 @@ By leveraging local AI through NexaSDK, Happy Mapper turns what would normally b
 
 ## 🛠️ How to Build and Run (Reproducible Steps)
 
-1. Clone the Repository
+Yes! Anyone cloning your repository can build and run this project directly.
+
+### 1. Clone the Repository
 ```bash
 git clone https://github.com/Zura16/Happy-Mapper.git
 cd Happy-Mapper
 ```
 
-2. Install Dependencies
-Frontend (React Native / Expo)
-
+### 2. Install Dependencies
+Navigate to the mobile app directory and install npm packages:
 ```bash
 cd my-app
 npm install
 ```
 
-4. Configure Frontend Environment Variables
+### 3. Configure Frontend Environment Variables
+Create a `.env` file inside `my-app/` (refer to `.env.example`):
 ```bash
 ANDROID_GOOGLE_MAPS_KEY=yourApiKey
 ANDROID_GOOGLE_PLACES_KEY=yourApiKey
 ```
 
-3. Run the React Native App (Expo)
-
-From the project root directory:
-
+### 4. Run the Mobile App (Expo)
+Start the Expo development server:
 ```bash
+# Start Expo dev server
+npx expo start
+
+# Or run directly on Android emulator / connected device:
 npx expo run:android
 ```
+
+---
+
+## ⚡ Running the Backend (Optional for Local API Dev)
+
+```bash
+cd backend/flask
+pip install -r requirements.txt
+python src/app.py
+```
+
