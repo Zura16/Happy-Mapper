@@ -1,7 +1,7 @@
 // Placeholder - Firebase is accessed through backend API
 // Your upload-menu feature uses the Flask API, not direct Firebase access
 export const firebaseConfig = {
-  apiKey: "AIzaSyA_2ng5CAA92h30L9ec_NK1tDqJGnb5H3Y",
+  apiKey: process.env.EXPO_PUBLIC_FIREBASE_API_KEY || "YOUR_FIREBASE_API_KEY",
   authDomain: "happy-hour-mvp.firebaseapp.com",
   projectId: "happy-hour-mvp",
   storageBucket: "happy-hour-mvp.firebasestorage.app",
